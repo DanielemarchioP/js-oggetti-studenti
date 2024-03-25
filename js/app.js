@@ -18,6 +18,11 @@ const studenti = [
     }
 ]
 
+studenti.forEach( function(element){
+    console.log(element.nome, element.cognome)
+})
+
+
 // for(let i = 0 ; i < studenti.length ; i++){
 //     const name = studenti[i].nome
 //     const surname = studenti[i].cognome
@@ -27,19 +32,28 @@ const studenti = [
 
 
 let nuovoStudente = {
-    nome : prompt('Nome del nuovo studente'),
+    nome : (prompt('Nome del nuovo studente')),
     cognome : prompt('Cognome del nuovo studente'),
     eta : parseInt(prompt('Eta del nuovo studente'))
 }
 studenti.push(nuovoStudente)
 console.log(studenti)
 
- for(let i = 0 ; i < studenti.length ; i++){
-     const name = studenti[i].nome
-     const surname = studenti[i].cognome
-     const eta = studenti[i].eta
 
-     console.log(`Il nome dello studente e ${name} , mentre il cognome e ${surname} l'eta di ${eta}` )
- }
+studenti.forEach( function (element){
+const name = element.nome
+const surname = element.cognome
+const eta = element.eta
+console.log(`Il nome dello studente e ${name} , mentre il cognome e ${surname} l'eta di ${eta}` )
+})
+
+
+//  for(let i = 0 ; i < studenti.length ; i++){
+//      const name = studenti[i].nome
+//      const surname = studenti[i].cognome
+//      const eta = studenti[i].eta
+
+//      console.log(`Il nome dello studente e ${name} , mentre il cognome e ${surname} l'eta di ${eta}` )
+//  }
 
 
