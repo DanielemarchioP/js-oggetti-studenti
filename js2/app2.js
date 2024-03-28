@@ -65,7 +65,9 @@ function aggiungiStudente(e){
     const name = document.getElementById("name").value
     const surname = document.getElementById("surname").value
     const age = document.getElementById("age").value
+    
 
+    
     const nuovoStudente = {
         nome : name,
         cognome : surname,
@@ -75,6 +77,7 @@ function aggiungiStudente(e){
     console.log(nuovoStudente)
     studenti.push(nuovoStudente)
     
+    if(age>18){
     const tBodyElement = document.getElementById('classe-studenti')
     const trHtmlElement = 
     `
@@ -86,6 +89,7 @@ function aggiungiStudente(e){
   `
 
     tBodyElement.innerHTML += trHtmlElement
+}
 }
 
 console.log(studenti)
